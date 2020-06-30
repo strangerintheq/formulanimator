@@ -30,7 +30,7 @@ function formulanimator(svg) {
     t /= 1000;  
     els.forEach(function(e) {
         for (let a in e.dataset) {
-          let i = e.getAttribute('index') || 0;
+          let i = +e.getAttribute('index') || 0;
           let f = e.dataset[a];  
           f && e.setAttribute(a, window[f](t, i, e));
         }
